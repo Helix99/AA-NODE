@@ -1,0 +1,26 @@
+######################################
+## AA NODE
+
+AANode.name=AANode (8Mhz Internal)
+
+AANode.upload.tool=arduino:avrdude
+AANode.upload.protocol=arduino
+AANode.upload.maximum_size=30720
+AANode.upload.maximum_data_size=2048
+AANode.upload.speed=19200
+
+AANode.bootloader.tool=arduino:avrdude
+AANode.bootloader.unlock_bits=0x3F
+AANode.bootloader.lock_bits=0x0F
+AANode.bootloader.low_fuses=0xE2
+AANode.bootloader.high_fuses=0xD2
+AANode.bootloader.extended_fuses=0x06
+AANode.bootloader.file=DualOptiboot/optiboot_atmega328.hex
+
+
+AANode.build.board=AVR_UNO
+AANode.build.core=arduino:arduino
+AANode.build.variant=arduino:standard
+
+AANode.build.mcu=atmega328p
+AANode.build.f_cpu=8000000L
