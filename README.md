@@ -8,27 +8,45 @@ https://alex2475.wixsite.com/helix-technology
 # Arduino Pinout
 
 RST - Reset on ICSP and DTR pin on FTDI via capacitor. Pulled high by R6.
+
 D0/RX - FTDI TX
+
 D1/TX - FTDI RX
 
 D2 - D2 on trigger connector
+
 D3 - D3 on left saddle connector
+
 D4 - Data line on DS18B20 breakout
+
 D5 - D5 on left saddle connector
+
 D6 - D6 on left saddle connector
+
 D7 - SPI flash chip slave select
+
 D8 - Source for voltage sense divider. D8 must be high to get voltage reading on A0. Internal voltage ref should be Internal 1.1v 
+
 D9 - CE on NRF24 Module
+
 D10/SS - NRF24 module slave select
+
 D11/MOSI - SPI Master Out Slave In, connected to NRF24, Flash Chip and ICSP
+
 D12/MISO - SPI Master In Slave Out, connected to NRF24, Flash Chip and ICSP
+
 D13/CLK - SPI clock, connected to NRF24, Flash Chip and ICSP
 
 A0 - Voltage Sensor in from R2 and R3 divider
+
 A1 - A1 on left saddle connector
+
 A2 - A2 on left saddle connector
+
 A3 - Data to SHA signing chip
+
 A4/SDA - SDA on right saddle connector
+
 A5/SCL - SCL on right saddle connector
 
 ## Power
@@ -51,7 +69,7 @@ C1 - ARef capacitor, 0.1uf
 
 ## Voltage Sense
 
-Voltage divider between resistors R2 and R3 provides a voltage reading of VCC. Useful in battery operated scenarios. To save power this circuit must be activated by writing to the arduino pin D8 high. A small delay after pulling D8 high is recommended to allow the circuit to settle. 
+Voltage divider between resistors R2 and R3 provides a voltage reading of VCC on Arduino A0. Useful in battery operated scenarios. To save power this circuit must be activated by writing to the arduino pin D8 high. A small delay after pulling D8 high is recommended to allow the circuit to settle. 
 
 The ADC reference must be set to Internal 1.1v.
 
