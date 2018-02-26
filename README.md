@@ -31,7 +31,7 @@ A3 - Data to SHA signing chip
 A4/SDA - SDA on right saddle connector
 A5/SCL - SCL on right saddle connector
 
-#Power
+## Power
 
 VCC - 3v3 or lower. Over 3.3v will destroy the NRF24 Module
 
@@ -49,7 +49,7 @@ C4/C8 - Power capacitors near NRF24 module, 1uf + 10uf
 
 C1 - ARef capacitor, 0.1uf
 
-#Voltage Sense
+## Voltage Sense
 
 Voltage divider between resistors R2 and R3 provides a voltage reading of VCC. Useful in battery operated scenarios. To save power this circuit must be activated by writing to the arduino pin D8 high. A small delay after pulling D8 high is recommended to allow the circuit to settle. 
 
@@ -57,37 +57,37 @@ The ADC reference must be set to Internal 1.1v.
 
 Values of 1Mohm for R2 and 470Kohm for R3 will sense a maximum of 3.44v (i.e reading of 1023 on arduino A0). This equates to around 0.003v per ADC step.
 
-#Trigger
+## Trigger
 
 VCC and GND pins along with arduino pin D2 are presented. The D2 is an interrupt pin on the Atmega328p, INT0. The solder jumper SJ1 can be used to select a pull up or down through resistor R5
 
-#DS18B20
+## DS18B20
 
 Data is connected via arduino pin D4, resistor R1 should be 4.7k.
 
-#LED's
+## LED's
 
 LED D1 is enabled through the solder jumper SJ3 and has the current limiting resistor R7. If enabled it is connected to the arduino pin D6
 LED D1 is enabled through the solder jumper SJ4 and has the current limiting resistor R8. If enabled it is connected to the arduino pin D2
 
-#Reset
+## Reset
 
 Reset is connected by C3 (0.1uf) to the DTR port of the FTDI connector and to the reset pin of the ICSP connector
 
-#SHA Signing
+## SHA Signing
 
 Tested and Validated Chip : ATSHA204A-STUCZ-T
 
 U2 is connected in onewire mode. Resistor R4 should be 100k
 
-#SPI Flash
+## SPI Flash
 
 Tested and Validated Chip : AT25DN512C-SSHF-B
 512Kbit
 
 Used for dualoptiboot over the air programming or general storage. Slave Select is Arduino D7.
 
-#Ceramic Resonator
+## Ceramic Resonator
 
 Specified Chip : CSTCE8M00G52-R0
 
