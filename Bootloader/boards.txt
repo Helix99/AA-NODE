@@ -15,7 +15,7 @@ AANode.bootloader.lock_bits=0x0F
 AANode.bootloader.low_fuses=0xE2
 AANode.bootloader.high_fuses=0xD2
 AANode.bootloader.extended_fuses=0x06
-AANode.bootloader.file=DualOptiboot/optiboot_atmega328.hex
+AANode.bootloader.file=aa_node/optiboot_aa_node.hex
 
 
 AANode.build.board=AVR_UNO
